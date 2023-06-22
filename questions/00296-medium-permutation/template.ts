@@ -1,1 +1,0 @@
-type Permutation<T> = any

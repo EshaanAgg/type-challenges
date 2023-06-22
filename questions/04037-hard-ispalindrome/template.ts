@@ -1,1 +1,0 @@
-type IsPalindrome<T> = any

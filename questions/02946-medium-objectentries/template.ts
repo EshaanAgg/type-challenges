@@ -1,1 +1,0 @@
-type ObjectEntries<T> = any

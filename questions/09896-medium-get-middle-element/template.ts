@@ -1,1 +1,0 @@
-type GetMiddleElement<T> = any

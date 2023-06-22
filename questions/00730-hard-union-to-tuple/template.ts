@@ -1,1 +1,0 @@
-type UnionToTuple<T> = any

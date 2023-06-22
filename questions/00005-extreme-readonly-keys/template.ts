@@ -1,1 +1,0 @@
-type GetReadonlyKeys<T> = any

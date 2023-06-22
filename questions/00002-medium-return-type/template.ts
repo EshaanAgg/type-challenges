@@ -1,1 +1,0 @@
-type MyReturnType<T> = any

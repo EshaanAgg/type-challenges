@@ -1,1 +1,0 @@
-type IsAny<T> = any

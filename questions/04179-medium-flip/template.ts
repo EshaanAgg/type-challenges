@@ -1,1 +1,0 @@
-type Flip<T> = any

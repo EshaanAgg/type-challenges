@@ -1,1 +1,0 @@
-type Trunc = any

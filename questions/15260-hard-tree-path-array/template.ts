@@ -1,1 +1,0 @@
-type Path<T> = any
