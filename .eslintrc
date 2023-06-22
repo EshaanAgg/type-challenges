@@ -1,0 +1,7 @@
+{
+	"rules": {
+		"no-tabs": "off",
+		"@typescript-eslint/quotes": "off",
+		"@typescript-eslint/comma-dangle": "off"
+	}
+}
