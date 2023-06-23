@@ -35,7 +35,6 @@ type MyReadonly<T> = { readonly [P in keyof T]: T[P] }
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from "@type-challenges/utils"
-import { toUnicode } from "punycode"
 
 type cases = [Expect<Equal<MyReadonly<Todo1>, Readonly<Todo1>>>]
 

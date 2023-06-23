@@ -13,10 +13,18 @@
 
 ### Built In Types
 
+##### Commonly Used
+
 - `Pick <T, S>`: S must extend the keys of `T`. Used to choose only the properties specified by the type `S` from the dictionary type `T`
-- `Readonly<T>`: Makes all the properties of `T` readonly. It is a `shallow` operation, that it if any property of `T` is an object itself, then that object would not have it's properties as read only.
+- `Omit<T,K>`: Constructs a type by picking all properties from `T` and then removing `K`
 - `Exclude<T,S>`: Exclude the properties if `S` from `T`
+- `Readonly<T>`: Makes all the properties of `T` readonly. It is a `shallow` operation, that it if any property of `T` is an object itself, then that object would not have it's properties as read only.
+- `Function` can be used as an interface with `extends`.
+
+##### Others
+
 - `Awaited<T>`: Used to get the return type of a `Promise` or a chain of `nested promises`.
+- `ReturnType<fn>`: Returns the return type of any function.
 
 ### Helpful Tricks
 
@@ -29,16 +37,18 @@
   - For example, `T extends U ? X : Y` with the type argument `A | B | C` for `T` is resolved as `(A extends U ? X : Y) | (B extends U ? X : Y) | (C extends U ? X : Y)`
 - If you want Typescript to throw errors in any assertion, then you must be validate them using `extends` in the type parameter definition itself.
 - It is a common practice to use `recursion` in definition of types.
+- You can make some parameters optional by specifying a default value for them.
+  - For example: `type test: <T, K = keyof T> .....`
 
 ### Good Practices
 
 - Use `never` in types with `extend` if you are assured that the particular branch of the code is unreachable. This is important to ensure exhaustive conditions.
 
-#### Dummy Mistakes I Always Trip On
+### Dummy Mistakes I Always Trip On
 
 - If you are declaring a type parameter, let's say `type X<T extends (...args: any[]) => any>`, then you can't use the use the `infer` keyboard in the param definition itself. You can only use it on the `RHS` with another `extends` clause with the same definiton.
 
-### Random but Helpful
+### Random Explorations
 
 - This test suite uses the `Equal` type with the following definiton:
 
