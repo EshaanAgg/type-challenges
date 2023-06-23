@@ -22,10 +22,18 @@
 
 /* _____________ Your Code Here _____________ */
 
-type MyAwaited<T> = any
+type Thenable<T> = {
+	then: (_: (_: T) => any) => any
+}
+
+type MyAwaited<T extends Thenable<any>> = T extends Thenable<infer U>
+	? U extends Thenable<any>
+		? MyAwaited<U>
+		: U
+	: never
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from "@type-challenges/utils"
 
 type X = Promise<string>
 type Y = Promise<{ field: number }>
@@ -34,11 +42,11 @@ type Z1 = Promise<Promise<Promise<string | boolean>>>
 type T = { then: (onfulfilled: (arg: number) => any) => any }
 
 type cases = [
-  Expect<Equal<MyAwaited<X>, string>>,
-  Expect<Equal<MyAwaited<Y>, { field: number }>>,
-  Expect<Equal<MyAwaited<Z>, string | number>>,
-  Expect<Equal<MyAwaited<Z1>, string | boolean>>,
-  Expect<Equal<MyAwaited<T>, number>>,
+	Expect<Equal<MyAwaited<X>, string>>,
+	Expect<Equal<MyAwaited<Y>, { field: number }>>,
+	Expect<Equal<MyAwaited<Z>, string | number>>,
+	Expect<Equal<MyAwaited<Z1>, string | boolean>>,
+	Expect<Equal<MyAwaited<T>, number>>
 ]
 
 // @ts-expect-error
