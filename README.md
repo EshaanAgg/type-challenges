@@ -36,3 +36,14 @@ You can find all the generated challenges and their solutions in the [`playgroun
 <a href="./playground/medium/00012-medium-chainable-options.ts" target="_blank"><img src="https://img.shields.io/badge/-12%E3%83%BBChainable%20Options-d9901a" alt="12・Chainable Options"/></a>
 <a href="./playground/medium/00015-medium-last-of-array.ts" target="_blank"><img src="https://img.shields.io/badge/-15%E3%83%BBLast%20of%20Array-d9901a" alt="15・Last of Array"/></a>
 <a href="./playground/medium/00016-medium-pop.ts" target="_blank"><img src="https://img.shields.io/badge/-16%E3%83%BBPop-d9901a" alt="16・Pop"/></a>
+
+<a href="./playground/medium/00106-medium-trim-left.ts" target="_blank"><img src="https://img.shields.io/badge/-106%E3%83%BBTrim%20Left-d9901a" alt="106・Trim Left"/></a>
+<a href="./playground/medium/00108-medium-trim.ts" target="_blank"><img src="https://img.shields.io/badge/-108%E3%83%BBTrim-d9901a" alt="108・Trim"/></a>
+<a href="./playground/medium/00110-medium-capitalize.ts" target="_blank"><img src="https://img.shields.io/badge/-110%E3%83%BBCapitalize-d9901a" alt="110・Capitalize"/></a>
+<a href="./playground/medium/00116-medium-replace.ts" target="_blank"><img src="https://img.shields.io/badge/-116%E3%83%BBReplace-d9901a" alt="116・Replace"/></a>
+<a href="./playground/medium/00119-medium-replaceall.ts" target="_blank"><img src="https://img.shields.io/badge/-119%E3%83%BBReplace%20All-d9901a" alt="119・Replace All"/></a>
+
+<a href="./playground/medium/02070-medium-drop-char.ts" target="_blank"><img src="https://img.shields.io/badge/-2070%E3%83%BBDrop%20Char-d9901a" alt="2070・Drop Char"/></a>
+
+<a href="./playground/medium/02688-medium-startswith.ts" target="_blank"><img src="https://img.shields.io/badge/-2688%E3%83%BBStarts%20With-d9901a" alt="2688・Starts With"/></a>
+<a href="./playground/medium/02693-medium-endswith.ts" target="_blank"><img src="https://img.shields.io/badge/-2693%E3%83%BBEnds%20With-d9901a" alt="2693・Ends With"/></a>

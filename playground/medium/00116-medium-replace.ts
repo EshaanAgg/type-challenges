@@ -18,18 +18,22 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Replace<S extends string, From extends string, To extends string> = any
+type Replace<S extends string, From extends string, To extends string> = From extends ""
+	? S
+	: S extends `${infer H}${From}${infer T}`
+	? `${H}${To}${T}`
+	: S
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from "@type-challenges/utils"
 
 type cases = [
-  Expect<Equal<Replace<'foobar', 'bar', 'foo'>, 'foofoo'>>,
-  Expect<Equal<Replace<'foobarbar', 'bar', 'foo'>, 'foofoobar'>>,
-  Expect<Equal<Replace<'foobarbar', '', 'foo'>, 'foobarbar'>>,
-  Expect<Equal<Replace<'foobarbar', 'bar', ''>, 'foobar'>>,
-  Expect<Equal<Replace<'foobarbar', 'bra', 'foo'>, 'foobarbar'>>,
-  Expect<Equal<Replace<'', '', ''>, ''>>,
+	Expect<Equal<Replace<"foobar", "bar", "foo">, "foofoo">>,
+	Expect<Equal<Replace<"foobarbar", "bar", "foo">, "foofoobar">>,
+	Expect<Equal<Replace<"foobarbar", "", "foo">, "foobarbar">>,
+	Expect<Equal<Replace<"foobarbar", "bar", "">, "foobar">>,
+	Expect<Equal<Replace<"foobarbar", "bra", "foo">, "foobarbar">>,
+	Expect<Equal<Replace<"", "", "">, "">>
 ]
 
 /* _____________ Further Steps _____________ */
