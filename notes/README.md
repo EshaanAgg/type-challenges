@@ -23,9 +23,29 @@
 - `"Looping" over an tuple`: You can use `P in T[number]` as a mapped type to loop over `T` if it extends `any[]` to get `P` (values of the tuple).
 - You can get the `length of an array` as `T["length"]`.
 - `Functions` with any number of arguments can be modelled with the help of the type expression `(...args: any[]) => void`
-- Using `destructing` with arrays to as `[infer R, ...any[]]` is a common method to get the first and last elements of an array.
-- `Distrubuted Conditional Types`
+- Using `destructuring` with arrays to as `[infer R, ...any[]]` is a common method to get the first and last elements of an array.
+- `Distributed Conditional Types`
   - Naked types can be automatically distributed over unions during intialization.
   - For example, `T extends U ? X : Y` with the type argument `A | B | C` for `T` is resolved as `(A extends U ? X : Y) | (B extends U ? X : Y) | (C extends U ? X : Y)`
-- If you want Typescript to throw errors in any assertion, then you must be validate them using `then` in the type parameter definition itself.
-- It is a common practice to use `recursion` in definition.
+- If you want Typescript to throw errors in any assertion, then you must be validate them using `extends` in the type parameter definition itself.
+- It is a common practice to use `recursion` in definition of types.
+
+### Good Practices
+
+- Use `never` in types with `extend` if you are assured that the particular branch of the code is unreachable. This is important to ensure exhaustive conditions.
+
+#### Dummy Mistakes I Always Trip On
+
+- If you are declaring a type parameter, let's say `type X<T extends (...args: any[]) => any>`, then you can't use the use the `infer` keyboard in the param definition itself. You can only use it on the `RHS` with another `extends` clause with the same definiton.
+
+### Random but Helpful
+
+- This test suite uses the `Equal` type with the following definiton:
+
+```ts
+type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ? 1 : 2
+	? true
+	: false
+```
+
+It relies on conditional types being deferred when `T` is not known. Assignability of deferred conditional types relies on an internal `isTypeIdenticalTo` check.
