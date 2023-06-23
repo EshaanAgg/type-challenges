@@ -28,7 +28,7 @@
 
 ### Helpful Tricks
 
-- `"Looping" over an tuple`: You can use `P in T[number]` as a mapped type to loop over `T` if it extends `any[]` to get `P` (values of the tuple).
+- `"Looping" over an tuple`: You can use `P in T[number]` as a mapped type to loop over `T` if it extends `any[]` to get `P` (values of the tuple) as a union type, which can be then iterated over with the help of `in`.
 - You can get the `length of an array` as `T["length"]`.
 - `Functions` with any number of arguments can be modelled with the help of the type expression `(...args: any[]) => void`
 - Using `destructuring` with arrays to as `[infer R, ...any[]]` is a common method to get the first and last elements of an array.
@@ -59,3 +59,5 @@ type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ?
 ```
 
 It relies on conditional types being deferred when `T` is not known. Assignability of deferred conditional types relies on an internal `isTypeIdenticalTo` check.
+
+- Tuples by definition are readonly, and thus have a specific integer (like `2`) as their length. But since arrays do not have a fixed length, they have `number` as their length (kind of like an infinity if you will).
