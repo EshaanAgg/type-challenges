@@ -17,20 +17,20 @@
 */
 
 /* _____________ Your Code Here _____________ */
-
-type TrimRight<S extends string> = any
+type toTrim = `\n` | ` ` | `\t`
+type TrimRight<S extends string> = S extends `${infer H}${toTrim}` ? `${TrimRight<H>}` : S
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from "@type-challenges/utils"
 
 type cases = [
-  Expect<Equal<TrimRight<'str'>, 'str'>>,
-  Expect<Equal<TrimRight<'str '>, 'str'>>,
-  Expect<Equal<TrimRight<'str     '>, 'str'>>,
-  Expect<Equal<TrimRight<'     str     '>, '     str'>>,
-  Expect<Equal<TrimRight<'   foo bar  \n\t '>, '   foo bar'>>,
-  Expect<Equal<TrimRight<''>, ''>>,
-  Expect<Equal<TrimRight<'\n\t '>, ''>>,
+	Expect<Equal<TrimRight<"str">, "str">>,
+	Expect<Equal<TrimRight<"str ">, "str">>,
+	Expect<Equal<TrimRight<"str     ">, "str">>,
+	Expect<Equal<TrimRight<"     str     ">, "     str">>,
+	Expect<Equal<TrimRight<"   foo bar  \n\t ">, "   foo bar">>,
+	Expect<Equal<TrimRight<"">, "">>,
+	Expect<Equal<TrimRight<"\n\t ">, "">>
 ]
 
 /* _____________ Further Steps _____________ */

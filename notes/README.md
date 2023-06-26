@@ -30,7 +30,7 @@
 
 - `"Looping" over an tuple`: You can use `P in T[number]` as a mapped type to loop over `T` if it extends `any[]` to get `P` (values of the tuple) as a union type, which can be then iterated over with the help of `in`.
 - You can get the `length of an array` as `T["length"]`.
-- `Functions` with any number of arguments can be modelled with the help of the type expression `(...args: any[]) => void`
+- `Functions` with any number of arguments can be modelled with the help of the type expression `(...args: any[]) => void`. Refer to [this problem](../playground/medium/00191-medium-append-argument.ts) to see the syntax in all it's glory!
 - Using `destructuring` with arrays to as `[infer R, ...any[]]` is a common method to get the first and last elements of an array.
 - `Distributed Conditional Types`
   - Naked types can be automatically distributed over unions during intialization.
@@ -39,6 +39,7 @@
 - It is a common practice to use `recursion` in definition of types.
 - You can make some parameters optional by specifying a default value for them.
   - For example: `type test: <T, K = keyof T> .....`
+- You can "typecast" a property of key value to a string with the help of `as` keyword and `template strings`.
 
 ### Good Practices
 

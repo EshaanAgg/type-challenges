@@ -36,14 +36,27 @@ You can find all the generated challenges and their solutions in the [`playgroun
 <a href="./playground/medium/00012-medium-chainable-options.ts" target="_blank"><img src="https://img.shields.io/badge/-12%E3%83%BBChainable%20Options-d9901a" alt="12・Chainable Options"/></a>
 <a href="./playground/medium/00015-medium-last-of-array.ts" target="_blank"><img src="https://img.shields.io/badge/-15%E3%83%BBLast%20of%20Array-d9901a" alt="15・Last of Array"/></a>
 <a href="./playground/medium/00016-medium-pop.ts" target="_blank"><img src="https://img.shields.io/badge/-16%E3%83%BBPop-d9901a" alt="16・Pop"/></a>
-
 <a href="./playground/medium/00106-medium-trim-left.ts" target="_blank"><img src="https://img.shields.io/badge/-106%E3%83%BBTrim%20Left-d9901a" alt="106・Trim Left"/></a>
 <a href="./playground/medium/00108-medium-trim.ts" target="_blank"><img src="https://img.shields.io/badge/-108%E3%83%BBTrim-d9901a" alt="108・Trim"/></a>
 <a href="./playground/medium/00110-medium-capitalize.ts" target="_blank"><img src="https://img.shields.io/badge/-110%E3%83%BBCapitalize-d9901a" alt="110・Capitalize"/></a>
 <a href="./playground/medium/00116-medium-replace.ts" target="_blank"><img src="https://img.shields.io/badge/-116%E3%83%BBReplace-d9901a" alt="116・Replace"/></a>
 <a href="./playground/medium/00119-medium-replaceall.ts" target="_blank"><img src="https://img.shields.io/badge/-119%E3%83%BBReplace%20All-d9901a" alt="119・Replace All"/></a>
-
+<a href="./playground/medium/00191-medium-append-arguments.ts" target="_blank"><img src="https://img.shields.io/badge/-191%E3%83%BBAppend%20Arguments-d9901a" alt="191・Append Arguments"/></a>
+<a href="./playground/medium/00298-medium-length-of-string.ts" target="_blank"><img src="https://img.shields.io/badge/-298%E3%83%BBLength%20of%20String-d9901a" alt="298・Length of String"/></a>
+<a href="./playground/medium/01042-medium-isnever.ts" target="_blank"><img src="https://img.shields.io/badge/-1042%E3%83%BBIs%20Never-d9901a" alt="1042・Is Never"/></a>
 <a href="./playground/medium/02070-medium-drop-char.ts" target="_blank"><img src="https://img.shields.io/badge/-2070%E3%83%BBDrop%20Char-d9901a" alt="2070・Drop Char"/></a>
-
 <a href="./playground/medium/02688-medium-startswith.ts" target="_blank"><img src="https://img.shields.io/badge/-2688%E3%83%BBStarts%20With-d9901a" alt="2688・Starts With"/></a>
 <a href="./playground/medium/02693-medium-endswith.ts" target="_blank"><img src="https://img.shields.io/badge/-2693%E3%83%BBEnds%20With-d9901a" alt="2693・Ends With"/></a>
+<a href="./playground/medium/03062-medium-shift.ts" target="_blank"><img src="https://img.shields.io/badge/-3062%E3%83%BBShift-d9901a" alt="3062・Shift"/></a>
+<a href="./playground/medium/03192-medium-reverse.ts" target="_blank"><img src="https://img.shields.io/badge/-3192%E3%83%BBReverse-d9901a" alt="3192・Reverse"/></a>
+<a href="./playground/medium/03196-medium-flip-arguments.ts" target="_blank"><img src="https://img.shields.io/badge/-3196%E3%83%BBFlip%20Arguments-d9901a" alt="3196・Flip Arguments"/></a>
+<a href="./playground/medium/04179-medium-flip.ts" target="_blank"><img src="https://img.shields.io/badge/-4179%E3%83%BBFlip-d9901a" alt="4179・Flip"/></a>
+<a href="./playground/medium/04803-medium-trim-right.ts" target="_blank"><img src="https://img.shields.io/badge/-4803%E3%83%BBTrim%20Right-d9901a" alt="4803・Trim Right"/></a>
+<a href="./playground/medium/05153-medium-indexof.ts" target="_blank"><img src="https://img.shields.io/badge/-5153%E3%83%BBIndex%20Of-d9901a" alt="5153・Index Of"/></a>
+<a href="./playground/medium/05317-medium-lastindexof.ts" target="_blank"><img src="https://img.shields.io/badge/-5317%E3%83%BBLast%20Index%20Of-d9901a" alt="5317・Last Index Of"/></a>
+<a href="./playground/medium/05360-medium-unique.ts" target="_blank"><img src="https://img.shields.io/badge/-5360%E3%83%BBUnique-d9901a" alt="5360・Unique"/></a>
+<a href="./playground/medium/09896-medium-getmiddleelement.ts" target="_blank"><img src="https://img.shields.io/badge/-9896%E3%83%BBGet%20Middle%20Element-d9901a" alt="9896・Get Middle Element"/></a>
+<a href="./playground/medium/09898-medium-appear-only-once.ts" target="_blank"><img src="https://img.shields.io/badge/-9898%E3%83%BBAppear%20Only%20Once-d9901a" alt="9896・Appear Only Once"/></a>
+<a href="./playground/medium/18182-medium-all.ts" target="_blank"><img src="https://img.shields.io/badge/-18142%E3%83%BBAll-d9901a" alt="18142・All"/></a>
+<a href="./playground/medium/18220-medium-filter.ts" target="_blank"><img src="https://img.shields.io/badge/-18220%E3%83%BBFilter-d9901a" alt="18220・Filter"/></a>
+<a href="./playground/medium/27862-medium-cartesianproduct.ts" target="_blank"><img src="https://img.shields.io/badge/-27862%E3%83%BBCartesian%20Product-d9901a" alt="27862・Cartesian Product"/></a>

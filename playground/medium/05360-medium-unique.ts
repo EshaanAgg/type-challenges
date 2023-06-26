@@ -20,17 +20,34 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Unique<T> = any
+// Utility type from 5153
+// Returns the index of an element in a tuple, and returns -1 if not found
+type IndexOf<T extends any[], U, C extends any[] = []> = T extends [infer F, ...infer R]
+	? Equal<F, U> extends true
+		? C["length"]
+		: IndexOf<R, U, [...C, F]>
+	: -1
+
+type Unique<T extends any[], C extends any[] = []> = T extends [infer H, ...infer R]
+	? Equal<IndexOf<C, H>, -1> extends true
+		? Unique<R, [...C, H]>
+		: Unique<R, [...C]>
+	: C
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from "@type-challenges/utils"
 
 type cases = [
-  Expect<Equal<Unique<[1, 1, 2, 2, 3, 3]>, [1, 2, 3]>>,
-  Expect<Equal<Unique<[1, 2, 3, 4, 4, 5, 6, 7]>, [1, 2, 3, 4, 5, 6, 7]>>,
-  Expect<Equal<Unique<[1, 'a', 2, 'b', 2, 'a']>, [1, 'a', 2, 'b']>>,
-  Expect<Equal<Unique<[string, number, 1, 'a', 1, string, 2, 'b', 2, number]>, [string, number, 1, 'a', 2, 'b']>>,
-  Expect<Equal<Unique<[unknown, unknown, any, any, never, never]>, [unknown, any, never]>>,
+	Expect<Equal<Unique<[1, 1, 2, 2, 3, 3]>, [1, 2, 3]>>,
+	Expect<Equal<Unique<[1, 2, 3, 4, 4, 5, 6, 7]>, [1, 2, 3, 4, 5, 6, 7]>>,
+	Expect<Equal<Unique<[1, "a", 2, "b", 2, "a"]>, [1, "a", 2, "b"]>>,
+	Expect<
+		Equal<
+			Unique<[string, number, 1, "a", 1, string, 2, "b", 2, number]>,
+			[string, number, 1, "a", 2, "b"]
+		>
+	>,
+	Expect<Equal<Unique<[unknown, unknown, any, any, never, never]>, [unknown, any, never]>>
 ]
 
 /* _____________ Further Steps _____________ */
