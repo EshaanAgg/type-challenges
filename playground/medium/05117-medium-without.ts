@@ -18,15 +18,32 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Without<T, U> = any
+type Included<X extends number, Y extends number | number[]> = Y extends number
+	? Equal<X, Y>
+	: Y extends number[]
+	? X extends Y[number]
+		? true
+		: false
+	: false
+
+type Without<T extends number[], U extends number | number[]> = T extends [
+	infer H extends number,
+	...infer R extends number[]
+]
+	? Included<H, U> extends false
+		? [H, ...Without<R, U>]
+		: [...Without<R, U>]
+	: T
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from "@type-challenges/utils"
+
+let x: Without<[1, 2], 1>
 
 type cases = [
-  Expect<Equal<Without<[1, 2], 1>, [2]>>,
-  Expect<Equal<Without<[1, 2, 4, 1, 5], [1, 2]>, [4, 5]>>,
-  Expect<Equal<Without<[2, 3, 2, 3, 2, 3, 2, 3], [2, 3]>, []>>,
+	Expect<Equal<Without<[1, 2], 1>, [2]>>,
+	Expect<Equal<Without<[1, 2, 4, 1, 5], [1, 2]>, [4, 5]>>,
+	Expect<Equal<Without<[2, 3, 2, 3, 2, 3, 2, 3], [2, 3]>, []>>
 ]
 
 /* _____________ Further Steps _____________ */

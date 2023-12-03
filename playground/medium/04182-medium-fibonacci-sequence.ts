@@ -21,16 +21,21 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Fibonacci<T extends number> = any
+type Fibonacci<
+	N extends number,
+	A extends any[] = [],
+	B extends any[] = [1],
+	I extends any[] = [1]
+> = N extends I["length"] ? B["length"] : Fibonacci<N, B, [...A, ...B], [...I, 1]>
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from '@type-challenges/utils'
+import type { Equal, Expect } from "@type-challenges/utils"
 
 type cases = [
-  Expect<Equal<Fibonacci<1>, 1>>,
-  Expect<Equal<Fibonacci<2>, 1>>,
-  Expect<Equal<Fibonacci<3>, 2>>,
-  Expect<Equal<Fibonacci<8>, 21>>,
+	Expect<Equal<Fibonacci<1>, 1>>,
+	Expect<Equal<Fibonacci<2>, 1>>,
+	Expect<Equal<Fibonacci<3>, 2>>,
+	Expect<Equal<Fibonacci<8>, 21>>
 ]
 
 /* _____________ Further Steps _____________ */

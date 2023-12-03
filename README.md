@@ -43,6 +43,11 @@ You can find all the generated challenges and their solutions in the [`playgroun
 <a href="./playground/medium/00119-medium-replaceall.ts" target="_blank"><img src="https://img.shields.io/badge/-119%E3%83%BBReplace%20All-d9901a" alt="119・Replace All"/></a>
 <a href="./playground/medium/00191-medium-append-arguments.ts" target="_blank"><img src="https://img.shields.io/badge/-191%E3%83%BBAppend%20Arguments-d9901a" alt="191・Append Arguments"/></a>
 <a href="./playground/medium/00298-medium-length-of-string.ts" target="_blank"><img src="https://img.shields.io/badge/-298%E3%83%BBLength%20of%20String-d9901a" alt="298・Length of String"/></a>
+<a href="./playground/medium/00459-medium-flatten.ts" target="_blank"><img src="https://img.shields.io/badge/-459%E3%83%BBFlatten-d9901a" alt="459・Flatten"/></a>
+<a href="./playground/medium/00527-medium-append-to-object.ts" target="_blank"><img src="https://img.shields.io/badge/-527%E3%83%BBAppend%20to%20Object-d9901a" alt="527・Append to Object"/></a>
+<a href="./playground/medium/00529-medium-absolute.ts" target="_blank"><img src="https://img.shields.io/badge/-529%E3%83%BBAbsolute-d9901a" alt="529・Absolute"/></a>
+<a href="./playground/medium/00531-medium-string-to-union.ts" target="_blank"><img src="https://img.shields.io/badge/-531%E3%83%BBString%20to%20Union-d9901a" alt="531・String to Union"/></a>
+<a href="./playground/medium/00599-medium-merge.ts" target="_blank"><img src="https://img.shields.io/badge/-599%E3%83%BBMedium-d9901a" alt="Merge"/></a>
 <a href="./playground/medium/01042-medium-isnever.ts" target="_blank"><img src="https://img.shields.io/badge/-1042%E3%83%BBIs%20Never-d9901a" alt="1042・Is Never"/></a>
 <a href="./playground/medium/02070-medium-drop-char.ts" target="_blank"><img src="https://img.shields.io/badge/-2070%E3%83%BBDrop%20Char-d9901a" alt="2070・Drop Char"/></a>
 <a href="./playground/medium/02688-medium-startswith.ts" target="_blank"><img src="https://img.shields.io/badge/-2688%E3%83%BBStarts%20With-d9901a" alt="2688・Starts With"/></a>
